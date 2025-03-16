@@ -5,10 +5,13 @@ func _process(_delta: float) -> void:
 	anim.play("default")
 	#$Telescope/Node2D/Telescope.position = get_global_mouse_position()
 func  _ready():
-	var area2d = $"Sargassum/Area2D"
+	var area2d = $"Background/Sargassum/Area2D"
 	area2d.body_entered.connect(_on_body_entered)
 func _on_body_entered(body: Node2D):
 	if body.name == "CharacterBody2D":
-		$"Sargassum".visible = false
+		#var global_position = $"Sargassum/Area2D/Sprite2D".global_position
+		$"Background/Sargassum/Area2D/Sprite2D".texture = load("res://assets/sight_seeing/glowing sargassum patch 1.png")
+		#Something to have the location set back to where the sargassum was originally located because it moves for some reason
+		#$"Sargassum/Area2D/Sprite2D".global_position = global_position 
 		print("hit")
 	

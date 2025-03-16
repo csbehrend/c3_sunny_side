@@ -62,12 +62,12 @@ scale = Vector2(7.5, 7.5)
 sprite_frames = SubResource("SpriteFrames_8v3d7")
 frame_progress = 0.017926
 
+[node name="Sargassum" parent="Background" instance=ExtResource("4_bvh4h")]
+position = Vector2(-535, 611)
+
 [node name="Container" parent="Background" instance=ExtResource("3_iak68")]
 layout_mode = 0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 40.0
-offset_bottom = 45.0
-
-[node name="Sargassum" parent="." instance=ExtResource("4_bvh4h")]
-position = Vector2(-535, 611)
+offset_left = 28.0
+offset_top = 190.0
+offset_right = 96.0
+offset_bottom = 235.0
