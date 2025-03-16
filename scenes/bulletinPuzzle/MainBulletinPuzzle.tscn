@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://clp4wd6bpurhj"]
+[gd_scene load_steps=5 format=3 uid="uid://clp4wd6bpurhj"]
 
 [ext_resource type="Texture2D" uid="uid://dwavpw6do5wh0" path="res://assets/bulletinPuzzle/backdrop-desk.png" id="1_m10pv"]
 [ext_resource type="PackedScene" uid="uid://6sxem62cxidj" path="res://scenes/bulletinPuzzle/puzzle1.tscn" id="2_p0472"]
+[ext_resource type="PackedScene" uid="uid://ddpfnaxxjqf3m" path="res://scenes/bulletinPuzzle/puzzle2.tscn" id="3_hi250"]
+[ext_resource type="PackedScene" uid="uid://dkr0fwfr57lhh" path="res://scenes/bulletinPuzzle/puzzle3.tscn" id="4_i25nd"]
 
 [node name="MainBulletinPuzzle" type="Node2D"]
 
@@ -12,5 +14,16 @@ offset_bottom = 1080.0
 texture = ExtResource("1_m10pv")
 
 [node name="Puzzle1" parent="." instance=ExtResource("2_p0472")]
+visible = false
 position = Vector2(525, 53)
+scale = Vector2(7.5, 7.5)
+
+[node name="Puzzle2" parent="." instance=ExtResource("3_hi250")]
+visible = false
+position = Vector2(502, -15)
+scale = Vector2(7.5, 7.5)
+numPieces = 10
+
+[node name="Puzzle3" parent="." instance=ExtResource("4_i25nd")]
+position = Vector2(525, 51)
 scale = Vector2(7.5, 7.5)

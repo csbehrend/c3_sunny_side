@@ -58,7 +58,7 @@ animations = [{
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(134.416, 31)
+position = Vector2(103, 20)
 scale = Vector2(1.07223, 1)
 sprite_frames = SubResource("SpriteFrames_2ych3")
 animation = &"Cutting"
