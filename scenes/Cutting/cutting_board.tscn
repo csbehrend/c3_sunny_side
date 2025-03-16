@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddd2g1krv408w"]
+
+[ext_resource type="Texture2D" uid="uid://dnkc44s7slo2f" path="res://assets/cutting/cutting board.png" id="1_rqjvk"]
+[ext_resource type="Texture2D" uid="uid://bpf5vg6n8romg" path="res://assets/cutting/Sargassum for cutting board.png" id="2_ahgpr"]
+
+[node name="Cutting Board" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CuttingBoard" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(387, 226.5)
+scale = Vector2(2.99219, 3.07639)
+texture = ExtResource("1_rqjvk")
+
+[node name="SargassumForCuttingBoard" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(422, 149)
+scale = Vector2(2.70976, 1.97526)
+texture = ExtResource("2_ahgpr")

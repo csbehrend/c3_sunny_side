@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr2airt6gdl7r"]
+
+[ext_resource type="Texture2D" uid="uid://b1j0dwpet7ps7" path="res://assets/cutting/black dotted line.png" id="1_pwcgq"]
+
+[node name="Lines" type="Node2D"]
+
+[node name="BlackDottedLine" type="Sprite2D" parent="."]
+position = Vector2(8, 106.5)
+scale = Vector2(1, 1.54861)
+texture = ExtResource("1_pwcgq")
