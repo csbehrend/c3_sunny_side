@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://drufsqcvffnpp"]
 
-[ext_resource type="Script" uid="uid://cu4dvjm175333" path="res://scenes/sight_seeing/main.gd" id="1_7m6xn"]
+[ext_resource type="Script" path="res://scenes/sight_seeing/main.gd" id="1_7m6xn"]
 [ext_resource type="Texture2D" uid="uid://djcjkoflut6gy" path="res://assets/sight_seeing/seashore sprite sheet.png" id="2_iak68"]
 [ext_resource type="PackedScene" uid="uid://dclcqk2aotfu7" path="res://scenes/sight_seeing/Scope.tscn" id="3_iak68"]
 [ext_resource type="PackedScene" uid="uid://khrciqurh6ah" path="res://scenes/sight_seeing/sargassum.tscn" id="4_bvh4h"]

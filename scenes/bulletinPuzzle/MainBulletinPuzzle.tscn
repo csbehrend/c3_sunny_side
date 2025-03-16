@@ -16,6 +16,7 @@ offset_bottom = 1080.0
 texture = ExtResource("1_m10pv")
 
 [node name="Puzzle1" parent="." instance=ExtResource("2_p0472")]
+visible = false
 position = Vector2(525, 53)
 scale = Vector2(7.5, 7.5)
 

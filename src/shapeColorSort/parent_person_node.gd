@@ -5,8 +5,8 @@ var AllColorsList = ["square", "circle", "triangle"]
 
 var paperShapeAndColorList = []
 var slotsList = []
-var numSlots
 var correctSlots = 0
+var numSlots
 
 var currentPickedUpPaperTexture
 
@@ -16,13 +16,16 @@ signal game_finished
 
 func _ready() -> void:
 	randomize()
-	numSlots = randi_range(7, 11)
+	#numSlots = randi_range(7, 11)
 	
 	$CenterSlotControl/paperSlotTexture.paperDropped.connect(onPaperDropped)
 	$CenterSlotControl/paperSlotTexture.paperPickedUp.connect(onPaperPickedUp)
 	$CenterSlotControl/paperSlotTexture.isCenterStack = true
 	
 	$CenterSlotControl.global_position = (get_parent().get_node("table").position + get_parent().get_node("table").size /2 + Vector2(-30, -30))
+	
+func start_game(stageNumSlots):
+	numSlots = stageNumSlots
 	generate_center_papers()
 	instantiate_slots()
 	nextCenterPaper()
