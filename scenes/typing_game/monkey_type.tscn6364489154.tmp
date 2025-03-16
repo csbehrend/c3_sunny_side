@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://beiutlp8ikmcp"]
+
+[ext_resource type="Script" uid="uid://dvgxmu3bn77dq" path="res://scenes/typing_game/monkey_type.gd" id="1_7jqyx"]
+[ext_resource type="PackedScene" uid="uid://colrrb41kjw8t" path="res://scenes/typing_game/TypingChar.tscn" id="2_shfnq"]
+[ext_resource type="Theme" uid="uid://b4o5tnm6aot0t" path="res://assets/typing_content/typing_theme.tres" id="3_gt3rt"]
+
+[node name="MonkeyType" type="HFlowContainer"]
+offset_right = 1.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+script = ExtResource("1_7jqyx")
+text_path = "res://assets/typing_content/content.txt"
+char_scene = ExtResource("2_shfnq")
+expected_theme = ExtResource("3_gt3rt")
+expected_fontsize = 8
