@@ -48,7 +48,9 @@ func get_scene_string(state: GameState) -> String:
 			
 func switch_scene(target: GameState):
 	SceneManager.no_effect_change_scene(get_scene_string(target))
-  
+
+@onready var max_round: int = 3
+
 @onready var round_number: int = 0
 @onready var round_score: int = 0
 @onready var minigame_stars_collected: int = 0

@@ -18,10 +18,3 @@ func _on_paren_tpaper_node_game_finished(score: int):
 
 func mock_start(difficultyNumSlots):
 	$PARENTpaperNode.start_game(difficultyNumSlots)
-	
-func _ready() -> void:
-	match (SceneManager.round_number):
-		0: mock_start(2)
-		1: mock_start(2)
-		2: mock_start(9)
-		_: assert(false)
