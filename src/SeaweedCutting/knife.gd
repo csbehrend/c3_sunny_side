@@ -5,53 +5,54 @@ var knife_max_x = 1625
 var rock_max_x = 1600
 var rock_start_x = 500
 var knife_start_x = 350
-var speed = 4
+var speed = 0
 
-var level_speed = 3
 var margin_error = 30
-
-var num_lines = 6
 var correct_lines = 0
+
+var level_speed
+var num_lines
 
 var line = load("res://scenes/Cutting/line.tscn")
 var x_posn = []
 
+var game_started = false
+
+func mock_start(difficultySpeed, difficultyNumLines):
+	num_lines = difficultyNumLines
+	level_speed = difficultySpeed
+	minigame_start()
+
 func _ready() -> void:
-<<<<<<< Updated upstream
-=======
 	match (SceneManager.round_number):
-		0: mock_start(3, 3)
-		1: mock_start(5, 5)
-		2: mock_start(3.5, 7)
+		0: mock_start(2, 1)
+		1: mock_start(2, 1)
+		2: mock_start(2, 1)
 		_: assert(false)
 
 func minigame_start():
->>>>>>> Stashed changes
 	$Knife.position.x = knife_start_x
 	
 	for i in range(num_lines):
 		var lineInstance = line.instantiate()
 		get_tree().root.call_deferred("add_child", lineInstance)
 		var magic_number = (rock_max_x - rock_start_x)/num_lines
-		x_posn.append(randf_range(rock_start_x + (magic_number * i), 10 + rock_start_x + (magic_number * (i + 1))))
+		x_posn.append(randf_range(rock_start_x + (magic_number * i), rock_start_x + (magic_number * (i + 0.75))))
 		lineInstance.position = Vector2(x_posn[i], 425)
 		lineInstance.modulate.a = 0.8
 		lineInstance.z_index = 0
+		speed = level_speed
+	game_started = true
+
+func game_finished(score: int):
+	SceneManager.round_number += 1
+	SceneManager.minigame_stars_collected += score
+	if (SceneManager.round_number < SceneManager.max_round):
+		SceneManager.no_effect_change_scene("Main")
+	else:
+		SceneManager.no_effect_change_scene("interchoice")
 
 func _process(_delta: float) -> void:
-<<<<<<< Updated upstream
-	$Knife.position.x += speed
-	if ($Knife.position.x > knife_max_x):
-		$Knife.position.x = knife_start_x
-		
-	if (num_lines != correct_lines):
-		#upper condition necessary so that correct_lines index is defined
-		if ((x_posn[correct_lines] + 75) < $Knife.position.x):
-			reset()
-	else:
-		speed = 0
-		
-=======
 	if game_started:
 		$Knife.position.x += speed
 		if ($Knife.position.x > knife_max_x):
@@ -65,7 +66,6 @@ func _process(_delta: float) -> void:
 			speed = 0
 			#await get_tree().create_timer(1).timeout #stackOverlow
 			game_finished(1)
->>>>>>> Stashed changes
 		
 func reset():
 	print("resetting")

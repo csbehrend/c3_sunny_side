@@ -1,26 +1,31 @@
 extends Control
 
-var AllShapesList = ["yellow", "purple", "blue"]
-var AllColorsList = ["square", "circle", "triangle"]
+const AllShapesList = ["yellow", "purple", "blue"]
+const AllColorsList = ["square", "circle", "triangle"]
 
-var paperShapeAndColorList = []
-var slotsList = []
-var numSlots
-var correctSlots = 0
+@onready var paperShapeAndColorList = []
+@onready var slotsList = []
+@onready var correctSlots = 0
+@onready var numSlots = 0
 
-var currentPickedUpPaperTexture
+@onready var currentPickedUpPaperTexture = null
 
 @onready var personPaperSlot = preload("res://scenes/shapeColorSort/paperSlot.tscn")
 
+signal game_finished
+
 func _ready() -> void:
 	randomize()
-	numSlots = randi_range(7, 11)
+	#numSlots = randi_range(7, 11)
 	
 	$CenterSlotControl/paperSlotTexture.paperDropped.connect(onPaperDropped)
 	$CenterSlotControl/paperSlotTexture.paperPickedUp.connect(onPaperPickedUp)
 	$CenterSlotControl/paperSlotTexture.isCenterStack = true
 	
 	$CenterSlotControl.global_position = (get_parent().get_node("table").position + get_parent().get_node("table").size /2 + Vector2(-30, -30))
+	
+func start_game(stageNumSlots):
+	numSlots = stageNumSlots
 	generate_center_papers()
 	instantiate_slots()
 	nextCenterPaper()
@@ -69,10 +74,6 @@ func onPaperDropped(correctStatus):
 
 func minigame_over():
 	print("all done")
-<<<<<<< Updated upstream
-=======
-	game_finished.emit(1)
->>>>>>> Stashed changes
 
 func onPaperPickedUp(node, paperTexture):
 	currentPickedUpPaperTexture = paperTexture

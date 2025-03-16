@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmeu5shsf5w4m"]
+
+[ext_resource type="Script" uid="uid://bkmx8fbejcgcm" path="res://Menus/Outro/outro.gd" id="1_hvfpx"]
+[ext_resource type="Texture2D" uid="uid://cdjrpnolon6gt" path="res://Menus/Assets/intro/scene 1.png" id="2_shx0f"]
+[ext_resource type="Theme" uid="uid://b4o5tnm6aot0t" path="res://assets/typing_content/typing_theme.tres" id="3_kgho0"]
+
+[node name="Outro" type="Node2D"]
+script = ExtResource("1_hvfpx")
+
+[node name="Scene1" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(960, 540)
+scale = Vector2(7.5, 7.479)
+texture = ExtResource("2_shx0f")
+
+[node name="Scene1_Text" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 1048.0
+offset_top = 43.0
+offset_right = 1866.0
+offset_bottom = 316.0
+theme = ExtResource("3_kgho0")
+theme_override_font_sizes/normal_font_size = 30
+text = "“Thanks for helping with our environmental response policy cycle! So long as the sargassum keeps coming in, we’ll have to keep adapting and working to bring our community through this problem.” "
+
+[node name="Scene1_Text2" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 1048.0
+offset_top = 46.0
+offset_right = 1866.0
+offset_bottom = 319.0
+theme = ExtResource("3_kgho0")
+theme_override_font_sizes/normal_font_size = 30
+text = "“Just like here, you can be a positive force in your own area! While your community may not have the same problems as mine, chances are there’s some environmental issue close to home.” "
+
+[node name="Scene1_Text3" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 1048.0
+offset_top = 43.0
+offset_right = 1866.0
+offset_bottom = 316.0
+theme = ExtResource("3_kgho0")
+theme_override_font_sizes/normal_font_size = 27
+text = "“Your local knowledge and effort can be a valuable part of your local policy cycle. You can be a part of the solution, helping with a beach cleanup, speaking at a town hall, or doing anything in between. So, get out there and use what you know!” "

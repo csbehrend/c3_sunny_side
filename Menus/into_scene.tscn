@@ -1,0 +1,122 @@
+[gd_scene load_steps=12 format=3 uid="uid://dvl5lo7ugcdil"]
+
+[ext_resource type="Script" uid="uid://begvyvf28vcc1" path="res://Menus/into_scene.gd" id="1_k4vl7"]
+[ext_resource type="Texture2D" uid="uid://cdjrpnolon6gt" path="res://Menus/Assets/intro/scene 1.png" id="1_v8mhl"]
+[ext_resource type="Texture2D" uid="uid://bao3c6rae3w53" path="res://Menus/Assets/intro/scene 2.png" id="2_dv322"]
+[ext_resource type="Texture2D" uid="uid://eyea6r65oui5" path="res://Menus/Assets/intro/zoom in sprite sheet.png" id="3_k4vl7"]
+[ext_resource type="Texture2D" uid="uid://d01mpg5jrfjbm" path="res://Menus/Assets/intro/scene 4.png" id="4_8iu4j"]
+[ext_resource type="Theme" uid="uid://b4o5tnm6aot0t" path="res://assets/typing_content/typing_theme.tres" id="6_8iu4j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byv8y"]
+atlas = ExtResource("3_k4vl7")
+region = Rect2(0, 0, 256, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlc2w"]
+atlas = ExtResource("3_k4vl7")
+region = Rect2(256, 0, 256, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21xx1"]
+atlas = ExtResource("3_k4vl7")
+region = Rect2(512, 0, 256, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yj6ml"]
+atlas = ExtResource("3_k4vl7")
+region = Rect2(768, 0, 256, 144)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o034k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_byv8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vlc2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_21xx1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yj6ml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8iu4j")
+}],
+"loop": false,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="IntoScene" type="Node2D"]
+script = ExtResource("1_k4vl7")
+
+[node name="Scene1" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(960, 540)
+scale = Vector2(7.5, 7.479)
+texture = ExtResource("1_v8mhl")
+
+[node name="Scene2" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(960, 540)
+scale = Vector2(7.5, 7.512)
+texture = ExtResource("2_dv322")
+
+[node name="Scene3" type="AnimatedSprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(960, 540)
+scale = Vector2(7.5, 7.509)
+sprite_frames = SubResource("SpriteFrames_o034k")
+frame = 4
+frame_progress = 1.0
+
+[node name="Scene1_Text" type="RichTextLabel" parent="."]
+offset_left = 1048.0
+offset_top = 40.0
+offset_right = 1866.0
+offset_bottom = 313.0
+theme = ExtResource("6_8iu4j")
+theme_override_font_sizes/normal_font_size = 30
+text = "“Hey there! You’re looking at a map of the Caribbean Sea and the many island countries that surround it. Lots of people know this region for beautiful beaches, but unfortunately our shores are being invaded right now. Invaded... by seaweed!” "
+metadata/_edit_use_anchors_ = true
+
+[node name="Scene1_Text2" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 1043.0
+offset_top = 41.0
+offset_right = 1861.0
+offset_bottom = 314.0
+theme = ExtResource("6_8iu4j")
+theme_override_font_sizes/normal_font_size = 26
+text = "“Since 2011, massive influxes of sargassum seaweed have been filling the Sea and washing ashore. These mats of brown algae used to be a normal part of our ecosystem, but the quantities have gotten so big that a lot of islands have called national emergencies!”"
+
+[node name="Scene2_Text" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 1048.0
+offset_top = 38.0
+offset_right = 1866.0
+offset_bottom = 311.0
+theme = ExtResource("6_8iu4j")
+theme_override_font_sizes/normal_font_size = 26
+text = "“Communities like mine in Barbados are working to adapt despite the hazards, but a lot of our understanding or local knowledge isn’t yet being used at the government level. Fisherfolk and other locals could have a lot of valuable input on new policies!” "
+
+[node name="Scene2_Text2" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 1123.0
+offset_top = 744.0
+offset_right = 1482.0
+offset_bottom = 826.0
+theme = ExtResource("6_8iu4j")
+theme_override_font_sizes/normal_font_size = 43
+text = "Barbados"
+
+[node name="Scene3_Text" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 1047.0
+offset_top = 39.0
+offset_right = 1840.0
+offset_bottom = 303.0
+theme = ExtResource("6_8iu4j")
+theme_override_font_sizes/normal_font_size = 28
+text = "“Some researchers at the University of the West Indies campus on Barbados came up with a five-step cycle for new environmental policies with lots of ideas for how locals can get involved. Time for you to try it out! "

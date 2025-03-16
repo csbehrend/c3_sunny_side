@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfxy3300ah5ds"]
+
+[ext_resource type="Script" uid="uid://c6o3bm77rls5a" path="res://scenes/manager/top_level.gd" id="1_ipdon"]
+
+[node name="TopLevel" type="Node"]
+script = ExtResource("1_ipdon")
+scene = "typing_test"

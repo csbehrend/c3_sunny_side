@@ -1,0 +1,99 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwbtbi6ho2mx4"]
+
+[ext_resource type="PackedScene" uid="uid://bvvm1ov6ifstt" path="res://scenes/Cutting/knife.tscn" id="1_af3pp"]
+[ext_resource type="Script" uid="uid://dt61a3nywrk8y" path="res://src/SeaweedCutting/knife.gd" id="1_ndok0"]
+[ext_resource type="Texture2D" uid="uid://dnkc44s7slo2f" path="res://assets/cutting/cutting board.png" id="2_as2cf"]
+[ext_resource type="Texture2D" uid="uid://bpf5vg6n8romg" path="res://assets/cutting/Sargassum for cutting board.png" id="4_52qv2"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ndok0")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_as2cf")
+
+[node name="Knife" parent="." instance=ExtResource("1_af3pp")]
+z_index = 1
+position = Vector2(39, 408)
+scale = Vector2(5.5, 5.5)
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="SargassumForCuttingBoard12" type="Sprite2D" parent="Node2D"]
+texture_filter = 1
+position = Vector2(1625, 287)
+scale = Vector2(2.45703, 3)
+texture = ExtResource("4_52qv2")
+
+[node name="SargassumForCuttingBoard11" type="Sprite2D" parent="Node2D"]
+visibility_layer = 2
+texture_filter = 1
+position = Vector2(1592, 484)
+scale = Vector2(2.45703, 3)
+texture = ExtResource("4_52qv2")
+
+[node name="SargassumForCuttingBoard7" type="Sprite2D" parent="Node2D"]
+visibility_layer = 2
+texture_filter = 1
+position = Vector2(1366, 473)
+scale = Vector2(2.45703, 3)
+texture = ExtResource("4_52qv2")
+
+[node name="SargassumForCuttingBoard8" type="Sprite2D" parent="Node2D"]
+texture_filter = 1
+position = Vector2(1414, 270)
+scale = Vector2(2.45703, 3)
+texture = ExtResource("4_52qv2")
+
+[node name="SargassumForCuttingBoard5" type="Sprite2D" parent="Node2D"]
+visibility_layer = 2
+texture_filter = 1
+position = Vector2(1177, 475)
+scale = Vector2(2.45703, 3)
+texture = ExtResource("4_52qv2")
+
+[node name="SargassumForCuttingBoard6" type="Sprite2D" parent="Node2D"]
+texture_filter = 1
+position = Vector2(1197, 281)
+scale = Vector2(2.45703, 3)
+texture = ExtResource("4_52qv2")
+
+[node name="SargassumForCuttingBoard3" type="Sprite2D" parent="Node2D"]
+texture_filter = 1
+position = Vector2(925, 472)
+scale = Vector2(2.45703, 3)
+texture = ExtResource("4_52qv2")
+
+[node name="SargassumForCuttingBoard4" type="Sprite2D" parent="Node2D"]
+texture_filter = 1
+position = Vector2(959, 271)
+scale = Vector2(2.45703, 3)
+texture = ExtResource("4_52qv2")
+
+[node name="SargassumForCuttingBoard" type="Sprite2D" parent="Node2D"]
+visibility_layer = 2
+texture_filter = 1
+position = Vector2(708, 467)
+scale = Vector2(2.45703, 3)
+texture = ExtResource("4_52qv2")
+
+[node name="SargassumForCuttingBoard2" type="Sprite2D" parent="Node2D"]
+texture_filter = 1
+position = Vector2(736, 264)
+scale = Vector2(2.45703, 3)
+texture = ExtResource("4_52qv2")
+
+[node name="SargassumForCuttingBoard9" type="Sprite2D" parent="Node2D"]
+visibility_layer = 2
+texture_filter = 1
+position = Vector2(569.5, 467)
+scale = Vector2(2.45703, 3)
+texture = ExtResource("4_52qv2")
+
+[node name="SargassumForCuttingBoard10" type="Sprite2D" parent="Node2D"]
+texture_filter = 1
+position = Vector2(597.5, 264)
+scale = Vector2(2.45703, 3)
+texture = ExtResource("4_52qv2")
