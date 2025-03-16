@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr2airt6gdl7r"]
+
+[ext_resource type="Texture2D" uid="uid://b1j0dwpet7ps7" path="res://assets/cutting/black dotted line.png" id="1_kkxg6"]
+[ext_resource type="Texture2D" uid="uid://8jxq4ybytvdn" path="res://assets/cutting/green line.png" id="2_ojoa1"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_kkxg6"]
+
+[node name="Lines" type="Node2D"]
+
+[node name="BlackDottedLine" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(8, 106.5)
+scale = Vector2(1, 1.54861)
+texture = ExtResource("1_kkxg6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 492.0
+texture = SubResource("CanvasTexture_kkxg6")
+
+[node name="GreenLine" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(5.5, 5.5)
+texture = ExtResource("2_ojoa1")
