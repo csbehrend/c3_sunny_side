@@ -48,16 +48,11 @@ func get_scene_string(state: GameState) -> String:
 			
 func switch_scene(target: GameState):
 	SceneManager.no_effect_change_scene(get_scene_string(target))
-
-
-#const max_round: int = 3
-const max_round: int = 1
-@onready var game_state: GameState = GameState.STATE_PLAY_1
+  
 @onready var round_number: int = 0
 @onready var round_score: int = 0
 @onready var minigame_stars_collected: int = 0
 @onready var total_stars_collected: int = 0
-@onready var typing_content: String = ""
 @onready var tempo: float = 1
 
 func in_game_transition(current_state: GameState, score: int):
@@ -71,15 +66,6 @@ func in_game_transition(current_state: GameState, score: int):
 func prep_next_game_vars():
 	round_number = 0
 	minigame_stars_collected = 0
-
-func prep_new_new_game():
-	game_state = GameState.STATE_PLAY_1
-	round_number = 0
-	round_score = 0
-	minigame_stars_collected = 0
-	total_stars_collected = 0
-	typing_content = ""
-	tempo = 1
 
 # consts
 const FADE: String = "fade"

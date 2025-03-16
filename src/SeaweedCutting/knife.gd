@@ -64,6 +64,7 @@ func _process(_delta: float) -> void:
 				reset()
 		else:
 			speed = 0
+			#await get_tree().create_timer(1).timeout #stackOverlow
 			game_finished(1)
 		
 func reset():

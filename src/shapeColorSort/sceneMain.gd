@@ -1,5 +1,13 @@
 extends Control
-
+	
+func _ready() -> void:
+	print("again")
+	match (SceneManager.round_number):
+		0: mock_start(4)
+		1: mock_start(7)
+		2: mock_start(11)
+		_: assert(false)
+ 
 func _on_paren_tpaper_node_game_finished(score: int):
 	SceneManager.round_number += 1
 	SceneManager.minigame_stars_collected += score

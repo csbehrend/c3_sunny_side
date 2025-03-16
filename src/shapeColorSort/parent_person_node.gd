@@ -74,8 +74,6 @@ func onPaperDropped(correctStatus):
 
 func minigame_over():
 	print("all done")
-	game_finished.emit(1)
-	
 
 func onPaperPickedUp(node, paperTexture):
 	currentPickedUpPaperTexture = paperTexture
