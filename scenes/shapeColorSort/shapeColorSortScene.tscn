@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8eqnmpqxqxjw"]
+
+[ext_resource type="Script" uid="uid://1pdykdf5q4rr" path="res://src/shapeColorSort/sceneMain.gd" id="1_gay12"]
+[ext_resource type="PackedScene" uid="uid://bv1p2iymeotc" path="res://scenes/shapeColorSort/paperSlot.tscn" id="2_gay12"]
+[ext_resource type="Texture2D" uid="uid://b7fxcpwbf86tc" path="res://assets/shapeColorSort/round table.png" id="2_yn130"]
+[ext_resource type="Script" uid="uid://1bk4gnp40qvq" path="res://src/shapeColorSort/parent_person_node.gd" id="3_boucb"]
+
+[node name="ShapeColourSortScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_gay12")
+
+[node name="table" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+texture = ExtResource("2_yn130")
+
+[node name="PARENTpaperNode" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 134.0
+offset_bottom = 124.0
+script = ExtResource("3_boucb")
+
+[node name="CenterSlotControl" parent="PARENTpaperNode" instance=ExtResource("2_gay12")]
+texture_filter = 1
+layout_mode = 0
+offset_left = 525.0
+offset_top = 260.0
+offset_right = 525.0
+offset_bottom = 260.0

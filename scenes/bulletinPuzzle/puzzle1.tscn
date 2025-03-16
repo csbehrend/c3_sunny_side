@@ -1,0 +1,77 @@
+[gd_scene load_steps=13 format=3 uid="uid://6sxem62cxidj"]
+
+[ext_resource type="Script" uid="uid://dype5r0lorx08" path="res://src/bulletinPuzzle/puzzle.gd" id="1_uq6bp"]
+[ext_resource type="Script" uid="uid://bi3a6klm2e6st" path="res://src/bulletinPuzzle/piece.gd" id="2_4vcoh"]
+[ext_resource type="Texture2D" uid="uid://ddxk5qucbytio" path="res://assets/bulletinPuzzle/puzzle1/puzzle1.png" id="2_bvjhf"]
+[ext_resource type="Texture2D" uid="uid://rymu53qqqk5i" path="res://assets/bulletinPuzzle/puzzle1/puzzle1_1.png" id="3_kqc4p"]
+[ext_resource type="Texture2D" uid="uid://b3ynl37ncw3fc" path="res://assets/bulletinPuzzle/puzzle1/puzzle1_2.png" id="5_0g0kt"]
+[ext_resource type="Texture2D" uid="uid://drx42ovdn6hmu" path="res://assets/bulletinPuzzle/puzzle1/puzzle1_3.png" id="6_7g0hs"]
+[ext_resource type="Texture2D" uid="uid://8mnri57q3ytq" path="res://assets/bulletinPuzzle/puzzle1/puzzle1_4.png" id="7_7wb1x"]
+[ext_resource type="Texture2D" uid="uid://cw7j3vwhyh41g" path="res://assets/bulletinPuzzle/puzzle1/puzzle1_5.png" id="8_ps5fj"]
+[ext_resource type="Texture2D" uid="uid://c7omf83r82ygw" path="res://assets/bulletinPuzzle/puzzle1/puzzle1_6.png" id="9_u4b4r"]
+[ext_resource type="Texture2D" uid="uid://c1gfuxqfbf3cu" path="res://assets/bulletinPuzzle/puzzle1/puzzle1_7.png" id="10_jbpfj"]
+[ext_resource type="Texture2D" uid="uid://db3ejij5x33ae" path="res://assets/bulletinPuzzle/puzzle1/puzzle1_8.png" id="11_5m7a5"]
+[ext_resource type="Texture2D" uid="uid://byc20r60l7cp8" path="res://assets/bulletinPuzzle/puzzle1/puzzle1_9.png" id="12_u2hs7"]
+
+[node name="Puzzle1" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_uq6bp")
+numPieces = 9
+
+[node name="finished puzzle" type="Sprite2D" parent="."]
+position = Vector2(58, 65)
+texture = ExtResource("2_bvjhf")
+
+[node name="Puzzle11" type="Sprite2D" parent="."]
+position = Vector2(88.5, 103.5)
+texture = ExtResource("3_kqc4p")
+script = ExtResource("2_4vcoh")
+idealPosition = Vector2(88.5, 103.5)
+
+[node name="Puzzle12" type="Sprite2D" parent="."]
+position = Vector2(25, 106)
+texture = ExtResource("5_0g0kt")
+script = ExtResource("2_4vcoh")
+idealPosition = Vector2(25, 106)
+
+[node name="Puzzle13" type="Sprite2D" parent="."]
+position = Vector2(96, 25)
+texture = ExtResource("6_7g0hs")
+script = ExtResource("2_4vcoh")
+idealPosition = Vector2(96, 25)
+
+[node name="Puzzle14" type="Sprite2D" parent="."]
+position = Vector2(24, 14)
+texture = ExtResource("7_7wb1x")
+script = ExtResource("2_4vcoh")
+idealPosition = Vector2(24, 14)
+
+[node name="Puzzle15" type="Sprite2D" parent="."]
+position = Vector2(68, 113)
+texture = ExtResource("8_ps5fj")
+script = ExtResource("2_4vcoh")
+idealPosition = Vector2(68, 113)
+
+[node name="Puzzle16" type="Sprite2D" parent="."]
+position = Vector2(50, 22.5)
+texture = ExtResource("9_u4b4r")
+script = ExtResource("2_4vcoh")
+idealPosition = Vector2(50, 22.5)
+
+[node name="Puzzle17" type="Sprite2D" parent="."]
+position = Vector2(90, 63)
+texture = ExtResource("10_jbpfj")
+script = ExtResource("2_4vcoh")
+idealPosition = Vector2(90, 63)
+
+[node name="Puzzle18" type="Sprite2D" parent="."]
+position = Vector2(28, 51)
+texture = ExtResource("11_5m7a5")
+script = ExtResource("2_4vcoh")
+idealPosition = Vector2(28, 51)
+
+[node name="Puzzle19" type="Sprite2D" parent="."]
+position = Vector2(42, 80)
+texture = ExtResource("12_u2hs7")
+script = ExtResource("2_4vcoh")
+idealPosition = Vector2(42, 80)
