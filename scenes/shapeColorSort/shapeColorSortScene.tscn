@@ -38,3 +38,5 @@ offset_left = 525.0
 offset_top = 260.0
 offset_right = 525.0
 offset_bottom = 260.0
+
+[connection signal="game_finished" from="PARENTpaperNode" to="." method="_on_paren_tpaper_node_game_finished"]

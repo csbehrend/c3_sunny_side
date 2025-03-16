@@ -5,6 +5,8 @@ var correctPieces : int
 
 var onePieceBeingDragged = false
 
+signal game_finished
+
 func _ready() -> void:
 	randomize()
 	$"finished puzzle".hide()
@@ -20,3 +22,4 @@ func onPieceLocked():
 	if (numPieces == correctPieces):
 		$"finished puzzle".z_index = 2
 		$"finished puzzle".show()
+		game_finished.emit(1)

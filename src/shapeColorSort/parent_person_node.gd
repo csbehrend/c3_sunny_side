@@ -12,6 +12,8 @@ var currentPickedUpPaperTexture
 
 @onready var personPaperSlot = preload("res://scenes/shapeColorSort/paperSlot.tscn")
 
+signal game_finished
+
 func _ready() -> void:
 	randomize()
 	numSlots = randi_range(7, 11)
@@ -69,6 +71,8 @@ func onPaperDropped(correctStatus):
 
 func minigame_over():
 	print("all done")
+	game_finished.emit(1)
+	
 
 func onPaperPickedUp(node, paperTexture):
 	currentPickedUpPaperTexture = paperTexture
