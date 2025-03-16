@@ -7,3 +7,6 @@ func _process(_delta: float) -> void:
 	rich_text_label.clear()#DeepSeek
 	rich_text_label.push_color(Color.BLACK)#DeepSeek
 	rich_text_label.add_text("Sargassum Rush!")#DeepSeek
+func _input(_delta):
+	if Input.is_action_just_pressed("left_click"):
+		get_tree().change_scene_to_file("res://Menus/Main_Menu.tscn")

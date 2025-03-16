@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://c1o2bdc6688ek"]
 
 [ext_resource type="Texture2D" uid="uid://c4fylh6q24msr" path="res://Menus/Assets/title page sprite sheet.png" id="1_5w4u5"]
-[ext_resource type="Script" path="res://Menus/title_screen.gd" id="1_hhuch"]
+[ext_resource type="Script" uid="uid://3m7soavu7xj2" path="res://Menus/title_screen.gd" id="1_hhuch"]
 [ext_resource type="Theme" uid="uid://b4o5tnm6aot0t" path="res://assets/typing_content/typing_theme.tres" id="3_avj5p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_400u4"]
