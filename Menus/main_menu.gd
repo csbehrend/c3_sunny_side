@@ -22,10 +22,10 @@ func _ready():
 func _on_button_pressed() -> void: #Coco Code Main Menu
 	get_tree().quit()#Coco Code Main Menu
 
-
+#Credits
 func _on_button_2_pressed() -> void: #Coco Code Main Menu
-	print("Credits")#Coco Code Main Menu
+	get_tree().change_scene_to_file("res://Menus/credits/GodotCredits.tscn")#Coco Code Main Menu
 
 #Play
 func _on_button_3_pressed() -> void: #Coco Code Main Menu
-	print("hi")
+	get_tree().change_scene_to_file("res://Menus/into_scene.tscn")
