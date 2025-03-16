@@ -61,4 +61,4 @@ func _input(event):
 
 func game_finished():
 	#SceneManager.round_score = score
-	SceneManager.no_effect_change_scene("MainBulletinPuzzle")
+	SceneManager.no_effect_change_scene("top_level")

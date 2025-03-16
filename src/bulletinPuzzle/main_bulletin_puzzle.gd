@@ -17,7 +17,7 @@ func finish_func(score: int):
 	if (SceneManager.round_number < SceneManager.max_round):
 		SceneManager.no_effect_change_scene("MainBulletinPuzzle")
 	else:
-		SceneManager.no_effect_change_scene("shapeColorSortScene")
+		SceneManager.no_effect_change_scene("interchoice")
 
 func hide_puzzle(difficultyPuzzleNumber):
 	get_node("Puzzle" + str(difficultyPuzzleNumber)).visible = false

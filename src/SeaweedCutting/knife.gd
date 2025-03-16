@@ -50,7 +50,7 @@ func game_finished(score: int):
 	if (SceneManager.round_number < SceneManager.max_round):
 		SceneManager.no_effect_change_scene("Main")
 	else:
-		SceneManager.no_effect_change_scene("typing_test")
+		SceneManager.no_effect_change_scene("interchoice")
 
 func _process(_delta: float) -> void:
 	if game_started:

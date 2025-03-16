@@ -6,7 +6,7 @@ func _on_paren_tpaper_node_game_finished(score: int):
 	if (SceneManager.round_number < SceneManager.max_round):
 		SceneManager.no_effect_change_scene("ShapeColourSortScene")
 	else:
-		SceneManager.no_effect_change_scene("Main") # Cutting game
+		SceneManager.no_effect_change_scene("interchoice") # Cutting game
 
 func mock_start(difficultyNumSlots):
 	$PARENTpaperNode.start_game(difficultyNumSlots)
