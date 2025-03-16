@@ -1,14 +1,14 @@
 extends Control
 
-var AllShapesList = ["yellow", "purple", "blue"]
-var AllColorsList = ["square", "circle", "triangle"]
+const AllShapesList = ["yellow", "purple", "blue"]
+const AllColorsList = ["square", "circle", "triangle"]
 
-var paperShapeAndColorList = []
-var slotsList = []
-var correctSlots = 0
-var numSlots
+@onready var paperShapeAndColorList = []
+@onready var slotsList = []
+@onready var correctSlots = 0
+@onready var numSlots = 0
 
-var currentPickedUpPaperTexture
+@onready var currentPickedUpPaperTexture = null
 
 @onready var personPaperSlot = preload("res://scenes/shapeColorSort/paperSlot.tscn")
 

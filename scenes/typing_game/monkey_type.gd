@@ -21,10 +21,10 @@ func _on_margin_container_margins_set(line_width: int):
 	#	content = file.get_as_text()
 	#	file.close()
 	
-	
 	var words: Array[String]
 	#words.assign(content.split(" "))
 	words.assign(SceneManager.typing_content.split(" "))
+	#print(words)
 	
 	for idx in range(words.size() - 1):
 		words[idx] += " "
@@ -57,4 +57,8 @@ func _input(event):
 			if (word_idx < word_objs.size()):
 				word_objs[word_idx].select_idx(letter_idx)
 			else:
-				test_completed.emit(1)
+				game_finished()
+
+func game_finished():
+	#SceneManager.round_score = score
+	SceneManager.no_effect_change_scene("MainBulletinPuzzle")

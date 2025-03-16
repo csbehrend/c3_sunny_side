@@ -24,7 +24,11 @@ func mock_start(difficultySpeed, difficultyNumLines):
 	minigame_start()
 
 func _ready() -> void:
-	mock_start(1, 6)
+	match (SceneManager.round_number):
+		0: mock_start(2, 1)
+		1: mock_start(2, 1)
+		2: mock_start(2, 1)
+		_: assert(false)
 
 func minigame_start():
 	$Knife.position.x = knife_start_x
@@ -40,6 +44,14 @@ func minigame_start():
 		speed = level_speed
 	game_started = true
 
+func game_finished(score: int):
+	SceneManager.round_number += 1
+	SceneManager.minigame_stars_collected += score
+	if (SceneManager.round_number < SceneManager.max_round):
+		SceneManager.no_effect_change_scene("Main")
+	else:
+		SceneManager.no_effect_change_scene("typing_test")
+
 func _process(_delta: float) -> void:
 	if game_started:
 		$Knife.position.x += speed
@@ -52,6 +64,7 @@ func _process(_delta: float) -> void:
 				reset()
 		else:
 			speed = 0
+			game_finished(1)
 		
 func reset():
 	print("resetting")
