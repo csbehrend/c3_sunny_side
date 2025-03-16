@@ -1,5 +1,66 @@
-[gd_scene format=3 uid="uid://c1o2bdc6688ek"]
+[gd_scene load_steps=9 format=3 uid="uid://c1o2bdc6688ek"]
 
-[node name="TitleScreen" type="TextureRect"]
+[ext_resource type="Texture2D" uid="uid://c4fylh6q24msr" path="res://Menus/Assets/title page sprite sheet.png" id="1_5w4u5"]
+[ext_resource type="Script" uid="uid://3m7soavu7xj2" path="res://Menus/title_screen.gd" id="1_hhuch"]
+[ext_resource type="Theme" uid="uid://b4o5tnm6aot0t" path="res://assets/typing_content/typing_theme.tres" id="3_avj5p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_400u4"]
+atlas = ExtResource("1_5w4u5")
+region = Rect2(0, 0, 256, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4cput"]
+atlas = ExtResource("1_5w4u5")
+region = Rect2(256, 0, 256, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfbi5"]
+atlas = ExtResource("1_5w4u5")
+region = Rect2(512, 0, 256, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ml3w"]
+atlas = ExtResource("1_5w4u5")
+region = Rect2(768, 0, 256, 144)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kek3w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_400u4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4cput")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mfbi5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ml3w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="TitleScreen" type="Node2D"]
+script = ExtResource("1_hhuch")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(964.5, 539)
+scale = Vector2(7.50391, 7.40278)
+sprite_frames = SubResource("SpriteFrames_kek3w")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 59.0
+offset_top = 478.0
+offset_right = 1956.0
+offset_bottom = 646.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_avj5p")
+theme_override_font_sizes/normal_font_size = 125
+text = "Sargassum Rush!"
