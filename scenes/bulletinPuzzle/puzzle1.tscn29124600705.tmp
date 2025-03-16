@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://6sxem62cxidj"]
+
+[ext_resource type="Texture2D" uid="uid://cbkbc037bywc" path="res://assets/puzzleGAME/puzzle1/puzzle1_1.png" id="1_eptwh"]
+[ext_resource type="Script" uid="uid://bi3a6klm2e6st" path="res://src/bulletinPuzzle/piece.gd" id="2_4vcoh"]
+
+[node name="Puzzle1" type="Node2D"]
+
+[node name="1piece" type="Sprite2D" parent="."]
+position = Vector2(574, 314)
+texture = ExtResource("1_eptwh")
+script = ExtResource("2_4vcoh")

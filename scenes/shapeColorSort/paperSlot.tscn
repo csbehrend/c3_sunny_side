@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bv1p2iymeotc"]
+
+[ext_resource type="Texture2D" uid="uid://2duoq0yhasph" path="res://icon.svg" id="1_ry881"]
+[ext_resource type="Script" uid="uid://bmm6nql3jjtjd" path="res://src/shapeColorSort/slotTexture.gd" id="2_d3ay5"]
+
+[node name="paperSlotControl" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+focus_mode = 1
+
+[node name="paperSlotTexture" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+mouse_filter = 0
+mouse_default_cursor_shape = 6
+texture = ExtResource("1_ry881")
+script = ExtResource("2_d3ay5")
