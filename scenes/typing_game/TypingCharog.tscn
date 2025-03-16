@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://623i1u4ri1wm"]
+
+[ext_resource type="Script" uid="uid://dmyam2qe21lk3" path="res://scenes/typing_game/typing_char.gd" id="1_303yq"]
+
+[node name="TypingChar" type="RichTextLabel"]
+offset_right = 50.0
+offset_bottom = 50.0
+text = "content"
+script = ExtResource("1_303yq")
+content = "test"

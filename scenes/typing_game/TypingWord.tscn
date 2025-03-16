@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b57rsd6oyicer"]
+
+[ext_resource type="Script" uid="uid://bt81akhytfmju" path="res://scenes/typing_game/typing_word.gd" id="1_i75jk"]
+[ext_resource type="PackedScene" uid="uid://colrrb41kjw8t" path="res://scenes/typing_game/TypingChar.tscn" id="2_rjwor"]
+
+[node name="TypingWord" type="HBoxContainer"]
+theme_override_constants/separation = 0
+script = ExtResource("1_i75jk")
+char_scene = ExtResource("2_rjwor")

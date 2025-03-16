@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://colrrb41kjw8t"]
+
+[ext_resource type="Script" uid="uid://dmyam2qe21lk3" path="res://scenes/typing_game/typing_char.gd" id="1_303yq"]
+[ext_resource type="Theme" uid="uid://b4o5tnm6aot0t" path="res://assets/typing_content/typing_theme.tres" id="1_yy04p"]
+
+[node name="TypingChar" type="RichTextLabel"]
+offset_right = 1.0
+offset_bottom = 40.0
+theme = ExtResource("1_yy04p")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(1, 0.498039, 0.313726, 1)
+fit_content = true
+autowrap_mode = 0
+script = ExtResource("1_303yq")
