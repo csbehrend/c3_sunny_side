@@ -36,3 +36,5 @@ func _input(_delta):
 	elif scene_count == 2:
 		label2.visible = false
 		label3.visible = true
+	elif scene_count > 2:
+		SceneManager.no_effect_change_scene("Main_Menu")

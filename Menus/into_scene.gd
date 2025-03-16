@@ -76,4 +76,6 @@ func _input(_delta):
 		var animation_finished = 1
 		if animation_finished == 1:
 			label5.visible = true
-		
+	elif scene_count > 3:
+		SceneManager.prep_new_new_game()
+		SceneManager.no_effect_change_scene("main")

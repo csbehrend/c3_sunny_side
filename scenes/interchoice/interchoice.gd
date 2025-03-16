@@ -47,7 +47,7 @@ func _ready():
 	background_texture.get_child(0).text = options_arr[0]
 	
 	var score: int = SceneManager.minigame_stars_collected
-	score = 0
+	score = 4
 	$TextureRect/Choice1/RichTextLabel.text = options_arr[1]
 	
 	if (score >= 1):
@@ -91,12 +91,16 @@ func common_end(idx: int):
 	SceneManager.prep_next_game_vars()
 	match (SceneManager.game_state):
 		SceneManager.GameState.STATE_PLAY_2:
+			SceneManager.typing_content += " "
 			SceneManager.no_effect_change_scene("MainBulletinPuzzle")
 		SceneManager.GameState.STATE_PLAY_3:
+			SceneManager.typing_content += " "
 			SceneManager.no_effect_change_scene("shapeColorSortScene")
 		SceneManager.GameState.STATE_PLAY_4:
+			SceneManager.typing_content += " "
 			SceneManager.no_effect_change_scene("Main") # cutting
 		SceneManager.GameState.STATE_PLAY_5:
-			SceneManager.no_effect_change_scene("typing_test")
+			SceneManager.no_effect_change_scene("Main_Menu")
+			#SceneManager.no_effect_change_scene("typing_test")
 		_:
 			assert(false)

@@ -63,6 +63,16 @@ func prep_next_game_vars():
 	round_number = 0
 	minigame_stars_collected = 0
 
+func prep_new_new_game():
+	game_state = GameState.STATE_PLAY_1
+	round_number = 0
+	round_score = 0
+	minigame_stars_collected = 0
+	total_stars_collected = 0
+	typing_content = ""
+	tempo = 1
+
+
 # consts
 const FADE: String = "fade"
 const COLOR: String = "color"
@@ -74,7 +84,7 @@ const BLACK: Color = Color(0, 0, 0)
 @onready var _in_transition: bool = false
 @onready var _stack: Array = []
 @onready var _stack_limit: int = -1
-@onready var _current_scene: String = ""
+@onready var _current_scene: String = "eee"
 @onready var _first_time: bool = true
 @onready var _patterns: Dictionary = {}
 @onready var _reserved_keys: Array = ["back", "null", "ignore", "refresh",

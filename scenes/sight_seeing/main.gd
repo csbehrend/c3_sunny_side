@@ -49,4 +49,9 @@ func _on_body_entered(body: Node2D):
 		correctAlgae += 1
 		if (correctAlgae == numAlgae):
 			$Container.hide()
+			game_finished(1)
 	
+func game_finished(score: int):
+	SceneManager.round_number += 1
+	SceneManager.minigame_stars_collected += score
+	SceneManager.no_effect_change_scene("interchoice")

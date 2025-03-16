@@ -2,15 +2,6 @@ extends Node2D
 
 func _ready() -> void:
 	print("round", SceneManager.round_number)
-	
-	if (SceneManager.round_number == 0):
-		GlobalTimer.start_timer(self, 15)
-			
-	if (SceneManager.round_number == 1):
-		GlobalTimer.start_timer(self, 35)
-			
-	if (SceneManager.round_number == 2):
-		GlobalTimer.start_timer(self, 50)
 	mock_start(SceneManager.round_number + 1)
 
 func _on_puzzle_1_game_finished(score: int):
