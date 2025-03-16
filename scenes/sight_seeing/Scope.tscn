@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://dclcqk2aotfu7"]
+
+[ext_resource type="Script" uid="uid://cinwt3x1btx83" path="res://scenes/sight_seeing/Fog of War.gd" id="1_3rk1m"]
+[ext_resource type="Texture2D" uid="uid://vlha5qoi0ygh" path="res://assets/sight_seeing/telescope.png" id="2_k53n7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3pjt8"]
+radius = 13.3568
+
+[node name="Container" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 35.0
+offset_top = 162.0
+offset_right = 75.0
+offset_bottom = 207.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-35, -162)
+script = ExtResource("1_3rk1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(3.00002, -2)
+scale = Vector2(7.5, 6.893)
+shape = SubResource("CircleShape2D_3pjt8")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+position = Vector2(-3.05176e-05, 6)
+scale = Vector2(7.5, 6.893)
+texture = ExtResource("2_k53n7")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(-1, 1.00003)
+scale = Vector2(15, 15)
+limit_left = 0
+limit_top = 0
+limit_right = 1142
+limit_bottom = 648
