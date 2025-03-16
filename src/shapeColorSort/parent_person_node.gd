@@ -69,6 +69,10 @@ func onPaperDropped(correctStatus):
 
 func minigame_over():
 	print("all done")
+<<<<<<< Updated upstream
+=======
+	game_finished.emit(1)
+>>>>>>> Stashed changes
 
 func onPaperPickedUp(node, paperTexture):
 	currentPickedUpPaperTexture = paperTexture

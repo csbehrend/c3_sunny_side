@@ -17,6 +17,16 @@ var line = load("res://scenes/Cutting/line.tscn")
 var x_posn = []
 
 func _ready() -> void:
+<<<<<<< Updated upstream
+=======
+	match (SceneManager.round_number):
+		0: mock_start(3, 3)
+		1: mock_start(5, 5)
+		2: mock_start(3.5, 7)
+		_: assert(false)
+
+func minigame_start():
+>>>>>>> Stashed changes
 	$Knife.position.x = knife_start_x
 	
 	for i in range(num_lines):
@@ -29,6 +39,7 @@ func _ready() -> void:
 		lineInstance.z_index = 0
 
 func _process(_delta: float) -> void:
+<<<<<<< Updated upstream
 	$Knife.position.x += speed
 	if ($Knife.position.x > knife_max_x):
 		$Knife.position.x = knife_start_x
@@ -40,6 +51,21 @@ func _process(_delta: float) -> void:
 	else:
 		speed = 0
 		
+=======
+	if game_started:
+		$Knife.position.x += speed
+		if ($Knife.position.x > knife_max_x):
+			$Knife.position.x = knife_start_x
+			
+		if (num_lines != correct_lines):
+			#upper condition necessary so that correct_lines index is defined
+			if ((x_posn[correct_lines] + 75) < $Knife.position.x):
+				reset()
+		else:
+			speed = 0
+			#await get_tree().create_timer(1).timeout #stackOverlow
+			game_finished(1)
+>>>>>>> Stashed changes
 		
 func reset():
 	print("resetting")

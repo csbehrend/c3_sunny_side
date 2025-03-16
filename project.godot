@@ -15,6 +15,15 @@ run/main_scene="uid://cwbtbi6ho2mx4"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+<<<<<<< Updated upstream
+=======
+[autoload]
+
+SceneManager="*res://addons/scene_manager/scene_manager.tscn"
+Scenes="*res://addons/scene_manager/scenes.gd"
+GlobalTimer="*res://src/timer.gd"
+
+>>>>>>> Stashed changes
 [display]
 
 window/size/viewport_width=1920
