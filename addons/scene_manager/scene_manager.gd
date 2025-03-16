@@ -49,21 +49,15 @@ func get_scene_string(state: GameState) -> String:
 func switch_scene(target: GameState):
 	SceneManager.no_effect_change_scene(get_scene_string(target))
 
-@onready var max_round: int = 3
+@onready var max_round: int = 1
+@onready var game_state: GameState = GameState.STATE_PLAY_1
+@onready var typing_content: String = ""
 
 @onready var round_number: int = 0
 @onready var round_score: int = 0
 @onready var minigame_stars_collected: int = 0
 @onready var total_stars_collected: int = 0
 @onready var tempo: float = 1
-
-func in_game_transition(current_state: GameState, score: int):
-	round_number += 1
-	if (round_number < max_round):
-		switch_scene(current_state)
-	match (current_state):
-		GameState.STATE_RESULTS_5:
-			print("yo")
 
 func prep_next_game_vars():
 	round_number = 0

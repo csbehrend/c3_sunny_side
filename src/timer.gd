@@ -16,7 +16,8 @@ func _process(delta):
 		time_left = active_timer.time_left
 		timer_label.text = str((snapped(time_left, 0.01)))
 	else:
-		timer_label.text = ""
+		if (timer_label != null):
+			timer_label.text = "" # Breaks otherwise
 
 func start_timer(scene_instance: Node, time_limit: float):
 	print("[GlobalTimer] Request to start timer: %d seconds" % time_limit)
