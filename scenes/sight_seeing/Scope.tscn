@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://typnsd8df1rw" path="res://assets/sight_seeing/telescope scaled.png" id="2_sl0pl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3pjt8"]
-radius = 2.02093
+radius = 7.0298
 
 [node name="Container" type="Control"]
 layout_mode = 3

@@ -61,10 +61,9 @@ scale = Vector2(7.5, 7.5)
 sprite_frames = SubResource("SpriteFrames_8v3d7")
 frame_progress = 0.017926
 
-[node name="Container" parent="." instance=ExtResource("3_iak68")]
-top_level = true
-light_mask = 4
-visibility_layer = 4
+[node name="Container" parent="Background" instance=ExtResource("3_iak68")]
+visible = false
+layout_mode = 0
 offset_left = 28.0
 offset_top = 190.0
 offset_right = 96.0

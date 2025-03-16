@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hwxgwopq4vi0"
-path="res://.godot/imported/glowing sargassum patch 1.png-1ebcf187eb8a91990c51185c4803fe9e.ctex"
+uid="uid://cb5ljxv88r46m"
+path="res://.godot/imported/correct tick.png-b7194a951634b858ff5dc674cf9eddd7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sight_seeing/glowing sargassum patch 1.png"
-dest_files=["res://.godot/imported/glowing sargassum patch 1.png-1ebcf187eb8a91990c51185c4803fe9e.ctex"]
+source_file="res://assets/sight_seeing/correct tick.png"
+dest_files=["res://.godot/imported/correct tick.png-b7194a951634b858ff5dc674cf9eddd7.ctex"]
 
 [params]
 
