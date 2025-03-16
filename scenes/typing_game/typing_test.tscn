@@ -41,4 +41,3 @@ layout_mode = 2
 
 [connection signal="sprite_scaled" from="Sprite2D" to="Sprite2D/MarginContainer" method="_on_sprite_2d_sprite_scaled"]
 [connection signal="margins_set" from="Sprite2D/MarginContainer" to="Sprite2D/MarginContainer/MonkeyType" method="_on_margin_container_margins_set"]
-[connection signal="test_completed" from="Sprite2D/MarginContainer/MonkeyType" to="." method="_on_monkey_type_test_completed"]

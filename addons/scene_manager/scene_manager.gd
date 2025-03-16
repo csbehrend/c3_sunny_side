@@ -51,11 +51,16 @@ func switch_scene(target: GameState):
 
 
 const max_round: int = 3
+#const max_round: int = 3
+const max_round: int = 1
 @onready var game_state: GameState = GameState.STATE_MENU
 @onready var round_number: int = 0
 @onready var round_score: int = 0
 @onready var stars_collected: int = 0
 @onready var typing_content: String = ""
+@onready var minigame_stars_collected: int = 0
+@onready var total_stars_collected: int = 0
+@onready var typing_content: String = "eeeee"
 @onready var tempo: float = 1
 
 func in_game_transition(current_state: GameState, score: int):
@@ -66,6 +71,9 @@ func in_game_transition(current_state: GameState, score: int):
 		GameState.STATE_RESULTS_5:
 			print("yo")
 
+func prep_next_game_vars():
+	round_number = 0
+	minigame_stars_collected = 0
 
 
 # consts
